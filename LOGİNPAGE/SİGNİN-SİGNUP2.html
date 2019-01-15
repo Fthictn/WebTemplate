@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"  crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="SİGNİN-SİGNUP.css">
+
+</head>
+<body>
+
+        <div id="container">
+                <div id="form">
+                  <ul>
+                    <li rel="tab1" class="active">GİRİŞ</li>
+                    <li rel="tab2">ÜYE OL</li>
+                    <li class="slideline"></li>
+                  </ul>
+                  <div id="tab-container">
+                    <div id="tab1" class="tab-content" rel="tab1">
+                      <form id="signin">
+                        <label for="username">E MAİL</label>
+                        <input type="email" name="username" AutoComplete="Off"/>
+                        <label for="password">ŞİFRE</label>
+                        <input type="password" name="password" AutoComplete="Off"/>
+                        <input type="checkbox" name="checkbox1" id="checkbox"/>
+                        <label for="checkbox1" id="check-label">Beni hatırla</label>
+                        <button type="submit" form="signin">GİRİŞ YAP</button>
+                      </form>
+                      <div class="hint forgot"><a href="#">Şifreni mi unuttun?</a></div>
+                    </div>
+                    <div id="tab2" class="tab-content" rel="tab2">
+                      <form id="signup">
+                        <label for="name">İSİM SOYİSİM</label>
+                        <input type="text" name="name" AutoComplete="Off"/>
+
+                        <label for="surname">ÖĞRENCİ NO</label>
+                        <input type="text" name="surname" AutoComplete="Off"/>
+                        
+
+                        <label for="email">EMAIL</label>
+                        <input type="email" name="email" AutoComplete="Off"/>
+
+                        
+                        <label for="password">ŞİFRE</label>
+                        <input type="password" name="password" AutoComplete="Off"/>
+
+
+                        <input type="checkbox" name="checkbox1" id="checkbox"/>
+                        <label for="checkbox1" id="check-label"><a href="#">Üyelik şartlarını okudum ve kabulediyorum</a></label>
+                        <button type="submit" form="signin">ÜYE OL</button>
+                      </form>
+                      <div class="hint help"><a href="#">Yardıma mı ihtiyacın var?</a></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+           <div id="slogan">
+             <label></label>
+           </div>   
+
+              <script>
+                
+                    $(".tab-content").hide();
+                    $(".tab-content:first").show();
+                    $("#form ul li").click(function() {
+
+                    $("#form ul li").removeClass("active");
+                    $(this).addClass("active");
+                    if ($(this).hasClass('slideline')) {
+                        return;
+                    }
+                    var whatTab = $(this).index();
+                    var howFar = 135 * whatTab;
+                    $(".slideline").css({
+                        left: howFar + "px"
+                    });
+                    $(".tab-content").hide();
+                    var activeTab = $(this).attr("rel");
+                    $("#" + activeTab).fadeIn(500);
+                    });
+              
+              </script>
+
+</body>
+</html>
