@@ -1,0 +1,276 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color:rgb(50, 145, 201);
+}
+/*MENU*/
+
+nav{
+width: 5.60%;
+height:100%;
+background-color: rgb(29, 50, 77);
+position:fixed;
+top: 0px;
+left: 0px;
+float: left;
+}
+
+#menulist{
+width: 100%;
+height: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+}
+
+.menulistitem{
+   width:100%;
+   height:100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   color: rgb(50, 145, 201);
+} 
+
+.menulistitem:hover{
+   background-color:rgb(50, 145, 201);
+}
+
+#menulist .menulistitem a{
+   text-decoration: none;
+   list-style-type: none;
+}
+
+.menulistitem{
+    color:rgb(50, 145, 201);
+    transition-property:all;
+    transition-duration: 0.6s;
+    transition-delay: 0.0s;
+    transition-timing-function:ease;
+}
+
+.menulistitem:hover{
+   color:rgb(29, 50, 77);
+}
+
+.icon{
+   font-size: 35px;
+   color: rgb(222, 231, 238);
+   transition:all;
+   transition-duration: 0.3s;
+   transition-delay: 0.0s;
+   transition-timing-function: ease;
+}
+
+.icon:hover{
+   font-size:45px;
+}
+
+.menulistitem span{
+font-family: 'Bangers', cursive;
+color: rgb(29, 50, 77);
+}
+
+/*MENU*/
+
+/*ANA KAPSAYICI*/
+section{
+   width: 94.40%;
+   height:722px;
+   float: right; 
+   background-color: rgb(50, 145, 201);        
+}
+/*ANA KAPSAYICI*/
+
+/*HEADER*/
+
+header{
+   height: 14.27%;
+   width: 100%;
+   background-color: rgb(29, 50, 77);
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.thing{
+    background:#fff;
+    border:1px solid #000;
+    width: 345px;
+    height: 40px;
+    position: relative;
+    overflow: hidden;
+    margin-left: 730px;
+
+  }
+  .thing .thing-label{
+    width: 100%;
+    position: absolute;
+    line-height: 40px;
+    color: #000;
+    left: 50px;
+    z-index: 1;
+    font-family: 'Bangers', cursive;
+  }
+  .thing .thing-text{
+    padding-left: 40px;
+    width: 0;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 11;
+    background: rgb(50, 145, 201);  
+    
+  }
+  .thing .thing-text:focus{
+    width:75%;
+    outline: none;
+    cursor: text;
+    background: #fff;
+  }
+  .thing .thing-text:focus + .thing-btn{
+        opacity: 1;
+        left: 265px;
+        z-index: 11;
+        background:rgb(50, 145, 201);  
+  }
+  .thing .thing-btn{
+    color: rgb(222, 231, 238);
+    position: absolute;
+    z-index: -11;
+    opacity: 0;
+    left: 0;
+    border: none;
+    top: 0;
+    cursor: pointer;
+    width: 80px;
+    height: 50px;
+    font-family: 'Bangers', cursive;
+  }
+  .thing .thing-label, .thing .thing-text, .thing .thing-btn{
+      display: inline-block;
+      height: 100%;
+      transition:0.6s ease;
+      text-transform: uppercase;
+  }
+
+#slogan{
+   color: rgb(222, 231, 238);
+   font-family: 'Permanent Marker', cursive;
+   font-size: 35px;
+   }
+
+   
+/*HEADER*/
+
+/*İÇERİK ALANI*/
+#content{
+    float: left;
+    height: 85.73%;
+    width: 50%;
+    background-color: rgb(222, 231, 238);
+    overflow: auto;
+    padding: 20px;
+
+}
+/*İÇERİK ALANI*/
+
+/*FOOTER*/
+footer{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    width: 100%;
+    height: 16.66%;
+    background-color:rgb(29, 50, 77);
+ }
+ 
+ #messages{
+    height: 40px;
+    width: 260px;
+    background-color: rgb(222, 231, 238);
+    margin-left: 50px;
+    display: flex;
+    align-items: center;
+    border:3px solid whitesmoke;
+    border-radius: 5px;
+    transition-property:all;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    transition-timing-function:ease;
+ }
+
+ 
+ #mesaj-link{
+    height: 40px;
+    width: 250px;
+    background-color: rgb(222, 231, 238);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition-property:all;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    transition-timing-function:ease;
+    text-decoration: none;
+ }
+
+ 
+ #mesaj-icon{
+    color: rgb(29, 50, 77);
+    font-size: 30px;
+    margin-left: 5px;
+ }
+ #hakkinda{
+ font-family: 'Bangers', cursive;
+ margin-left: 50px;
+ font-size: 20px;
+ color: rgb(29, 50, 77);
+ }
+ 
+ #information{
+    margin-left: 110px;
+    width: 260px;
+    height: 40px;
+    background-color: rgb(222, 231, 238);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition-property:all;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    transition-timing-function:ease;
+ }
+ 
+ #information-link{
+    width: 250px;
+    height: 40px;
+    background-color: rgb(222, 231, 238);
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    transition-property:all;
+    transition-duration: 0.3s;
+    transition-delay: 0.1s;
+    transition-timing-function:ease;
+    text-decoration: none;
+ }
+ #information-icon{
+    color: rgb(29, 50, 77);
+    font-size: 30px;
+    margin-left: 5px;
+ }
+ #negerekvardi{
+ font-family: 'Bangers', cursive;
+ margin-left: 50px;
+ font-size: 20px;
+ color: rgb(29, 50, 77);
+ }
+ 
+ /*FOOTER*/
+ 
+ 
